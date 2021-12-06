@@ -1,6 +1,6 @@
+
 <script>
-/*
-{
+"{
     "dir": "ltr",
     "lang": "en",
     "name": "Year in Pixels",
@@ -20,7 +20,5 @@
             "sizes": "512x512"
         }
     ]
-}
-
-*/
-</script>
+}"
+<script>
