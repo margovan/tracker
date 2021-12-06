@@ -135,7 +135,6 @@
     var moodValue = $('input[name=dayMood]:checked').val();
     $(activeMoodDay).attr("data-mood", moodValue);
     updateMoodCalendar();
-    createAvgChart();
     if (moodOptions[moodValue] != 'none') {
       var message = "Your day was <u>" + moodOptions[moodValue] + "</u>."
       $("#message").html(message);
@@ -165,7 +164,6 @@
       if (dialog) {
         loadMoodCalendar(moodCalendar);
         updateMoodCalendar();
-        createAvgChart();
         $dayMood.trigger('change');
         $("#importMoodText").val('');
         $("#importDialog").fadeOut('fast', function() {
@@ -191,14 +189,12 @@
       });
       loadMoodCalendar(moodArr.join(''));
       updateMoodCalendar();
-      createAvgChart();
       setActiveDayMoodRadio();
     },
     clearAllData: function() {
       var moodArr = Array.apply(null, Array(365)).map(Number.prototype.valueOf,0);
       loadMoodCalendar(moodArr.join(''));
       updateMoodCalendar();
-      createAvgChart();
       setActiveDayMoodRadio();
     },
     howAboutDialog: function() {
