@@ -1,8 +1,6 @@
-
-<script>
-"{
-    "dir": "ltr",
-    "lang": "en",
+//{
+   // "dir": "ltr",
+   // "lang": "en",
     "name": "Year in Pixels",
     "scope": "/",
     "display": "standalone",
@@ -20,5 +18,4 @@
             "sizes": "512x512"
         }
     ]
-}"
-<script>
+}
