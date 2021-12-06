@@ -120,36 +120,7 @@
     return results;
   }
   
-  function createAvgChart() {
-    var data = {
-      labels: ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"],
-      series: [getMonthMoodAvgArr()]
-    };
-    var options = {
-      axisY: {
-        onlyInteger: true,
-        labelInterpolationFnc: function(value, index) {
-          return moodOptions[index];
-        },
-        stretch: true,
-        offset: 50
-      },
-      axisX: {
-        offset: 20
-      },
-      high: 6,
-      low: 0,
-      showArea: true,
-      showLine: true,
-      showPoint: false,
-      fullWidth: true,
-      chartPadding: {
-        top: 0,
-        right: 10
-      }
-    };
-    new Chartist.Line('.ct-chart', data, options);
-  }
+ 
 
   $moodItems.on("click", function(e) {
     e.preventDefault();
@@ -253,5 +224,4 @@
   loadMoodCalendar();
   selectTodayMood();
   createPixelsForHeader();
-  createAvgChart();
 })();
