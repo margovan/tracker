@@ -89,19 +89,6 @@
     }
   }
   
-  function setQuoteOfTheDay() {
-    $.ajax({
-      url : "https://quotes.rest/qod",
-      dataType: "json",
-      type: "GET",
-      success: function(data) {
-        var content = data["contents"]["quotes"][0];
-        var quote = content["quote"];
-        var author = content["author"];
-        $("#quoteOfTheDay").html("<p>\""+quote+"\"</p><p class='author'>—"+author+"</p>");
-      }
-    });
-  }
   
   function getMonthMoodAvgArr() {
     var moods = $moodGrid.find('.item.month').map(function() {
@@ -262,22 +249,9 @@
       if (dialog) {
         menu.fillDemoData();
       }
-      break;
-    case "clear":
-      var dialog = confirm("Careful, this will clear all the current data. Are you sure?");
-      if (dialog) {
-        menu.clearAllData();
-      }
-      break;
-    case "about":
-      menu.howAboutDialog();
-      break;
-    }
-  }
 
   loadMoodCalendar();
   selectTodayMood();
   createPixelsForHeader();
-  setQuoteOfTheDay();
   createAvgChart();
 })();
